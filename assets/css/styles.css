@@ -11,6 +11,10 @@ body {
 
 /*UTILS*/
 
+.padded {
+    padding-top: 45px;
+}
+
 .container {
     max-width: 1250px;
     width: 100%;
@@ -59,7 +63,6 @@ section {
 /*HEADER*/
 
 .header {
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
     z-index: 10;
     position: relative;
 }
@@ -72,7 +75,7 @@ section {
     /*height: 60px;*/
     display: flex;
     justify-content: space-between;
-    padding: 15px 0;
+    padding-top: 15px;
 }
 
 .header__phone {
@@ -111,6 +114,62 @@ section {
     width: 15px;
     margin-right: 10px;
 }
+
+.header ul {
+    list-style-type: none;
+    display: flex;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+.header nav a {
+    padding: 5px 10px;
+    margin: 0 7px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #024C68;
+}
+
+.header nav li {
+    position: relative;
+}
+
+.header nav .active:after {
+    content: "";
+    width: calc(100% - 26px);
+    border-bottom: 2px solid #024C68;
+    position: absolute;
+    bottom: -15px;
+    left: 13px;
+}
+
+.header nav a:hover {
+    opacity: 0.8;
+}
+
+.top {
+    position: relative;
+    z-index: 3;
+    background-color: #ffffff;
+}
+
+.menu {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    background-color: #ffffff;
+}
+
+.sticky {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 5px;
+}
+
+/*.header u*/
 
 /*SLIDER*/
 
@@ -271,6 +330,25 @@ section {
     margin-bottom: 60px!important;
 }
 
+.partners__container {
+    display: flex;
+    width: 100%;
+}
+
+.partners__item {
+    margin: 0 30px;
+}
+
+.partners__item img {
+    width: 100%;
+    filter: grayscale(80);
+    transition: 200ms;
+}
+
+.partners__item img:hover {
+    filter: grayscale(0);
+}
+
 /*TYPES*/
 
 .types {
@@ -322,10 +400,69 @@ section {
 
 /*FOOTER*/
 
-.footer {
+.footer .container~p {
     text-align: center;
+}
+
+.footer {
     padding: 15px 0;
     position: relative;
     z-index: 5;
     background-color: #ffffff;
+}
+
+.footer .container {
+    display: flex;
+    padding: 50px 100px;
+}
+
+.footer .container>nav, .footer .container>div{
+    width: calc(100% / 3);
+}
+
+.footer nav ul {
+    list-style-type: none;
+    text-align: left;
+}
+
+.footer nav a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #024C68;
+    padding: 10px 0;
+}
+
+.footer__contacts {
+    text-align: right;
+}
+
+.footer__phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.footer__logo img{
+    height: 60px;
+    margin-top: 30px;
+}
+
+.footer__phone-item img {
+    width: 15px;
+    margin-right: 10px;
+}
+
+.footer__phone-item {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 600;
+    color: #000000;
+    transition: 200ms;
+}
+
+.footer__phone-item:hover {
+    opacity: 0.7;
 }
